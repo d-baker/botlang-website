@@ -1,13 +1,17 @@
 $(document).ready(function() {
     $("#dropdown").hide();
     
+    // this is here mostly for mobile purposes
     $("#menu").on("mousedown", function(e) {
-        $("#dropdown").show();
+        if ($("#dropdown").css("display") == "none") {
+            $("#dropdown").show();
+        } else {
+            $("#dropdown").hide();
+        }
     });
 
-    $("#menu").on("mouseleave", function(e) {
+    $("#dropdown").on("mouseleave", function(e) {
         $("#dropdown").hide();
     });
-
 
 });

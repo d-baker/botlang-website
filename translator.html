@@ -17,6 +17,7 @@
         </span>
 
         <ul id="dropdown">
+            <li><a href="https://twitter.com/botlang">Twitter</a></li>
             <li><a href="dictionary.html">Dictionary</a></li>
             <li><a href="translator.html">Translator</a></li>
             <li><a href="index.html">About</a></li>
@@ -25,11 +26,19 @@
         <h1> Botlang | Translator </span> </h1>
 
     </div>
+    
+    <span id="transbuttons">
+        <input type="radio" name="translate" id="engbot" value="engbot" checked="checked"/>
+        <label for="engbot">English -&gt; Bottish</label>
+
+        <input type="radio" name="translate" id="boteng" value="boteng"/>
+        <label for="boteng">Bottish -&gt; English</label>
+    </span>
 
     <div id="stuff">
         <textarea id="english" placeholder="type English to be translated" autofocus></textarea>
 
-        <p id="translation"></p>
+        <p contentEditable="true" id="translation"></p>
     </div>
 
     <button id="translate">Translate</button>

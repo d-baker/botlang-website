@@ -19,18 +19,15 @@ $(document).ready(function() {
             }
        });
 
-    function translate(text) {
-        var english = text.split(" ");
+    function translate(text, inputlang, targetlang) {
+        var input = text.split(" ");
         var sentence = text;
 
-        for (i = 0; i < english.length; i++) {
-            var translation = "";
-
+        for (i = 0; i < input.length; i++) {
             $.each(dictionary, function(n) {
-                if (dictionary[n].english == english[i]) {
-                    sentence = sentence.replace(english[i], dictionary[n].bottish);
+                if (dictionary[n][inputlang] == input[i]) {
+                    sentence = sentence.replace(input[i], dictionary[n][targetlang]);
                 }
-
             });
 
         }
@@ -40,8 +37,21 @@ $(document).ready(function() {
 
     $("#translate").click(function() {
         var text = $("#english").val().replace(/\r?\n/g, ' <br> ');
-        translation = translate(text);
+
+        if ($("#engbot").attr("checked") == "checked") {
+            translation = translate(text, "english", "bottish");
+        } else {
+            translation = translate(text, "bottish", "english");
+        }
         $("#translation").html(translation);
+    });
+
+    $("#engbot").click(function() {
+        $("#english").attr("placeholder", "type English to be translated");
+    });
+
+    $("#boteng").click(function() {
+        $("#english").attr("placeholder", "type Bottish to be translated");
     });
 
     $("#clear").click(function() {

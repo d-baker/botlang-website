@@ -31,7 +31,6 @@ p:not(#translation) {
 
 #definitions {
 	display: block;
-	width: 100%;
 	padding-bottom: 20px;
 	height: 60vh;
 	overflow: auto;
@@ -110,7 +109,6 @@ label {
     //position: fixed;
     background: white;
     margin: 0px;
-    width: 100%;
     border-bottom: 1px solid gray;
 	padding: 20px 0px;
 	z-index: 100;

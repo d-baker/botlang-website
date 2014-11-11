@@ -1,0 +1,131 @@
+@import "reset";
+
+body {
+	line-height: 1.5em;
+	padding: 0px 20px;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 30px;
+	display: inline;
+
+}
+
+.abclinks {
+	padding: 20px 0px;
+
+	li {
+    	list-style-type: none;
+    	display: inline;
+    	cursor: pointer;
+    	padding-right: 10px;
+	}
+}
+
+#definitions {
+	display: block;
+	width: 100%;
+	padding-bottom: 20px;
+	height: 60vh;
+	overflow: auto;
+	
+	td, th {
+		width: 200px;
+		padding-right: 30px;
+		padding-top: 10px;
+	}
+
+	tr {
+		text-align: left;
+	}		
+}
+
+#heading {
+	padding-top: 20px;
+	display: block;
+	width: 100%;
+	th {
+		text-align: left;
+		width: 200px;
+		padding: 10px 0px;
+		padding-right: 30px;
+	}
+}
+
+button {
+    display: inline;
+}
+
+textarea {
+	resize: none;
+}
+
+#search {
+	float: right;
+	padding: 20px 0px;
+}
+
+label {
+	padding-right: 20px;
+}
+
+#stuff {
+	width: 830px;
+	height: 200px;
+	padding: 30px 0px;
+}
+
+#english {
+	border: 1px solid gray;
+	background: #eee;
+	color: black;
+	width: 400px;
+	height: 200px;
+}
+
+#translation {
+	display: inline-block;
+	width: 400px;
+	height: 200px;
+	border: 1px solid gray;
+	position: relative;
+	background: #eee;
+	color: black;
+	float: right;
+}
+
+#header {
+    //position: fixed;
+    background: white;
+    margin: 0px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+	padding: 20px 0px;
+	z-index: 100;
+}
+
+.pgtitle {
+	display: none;
+}
+
+#menu {
+	font-size: 30px;
+	&:hover {
+		cursor: pointer;
+		background: #aaa;
+	}
+}
+
+#dropdown {
+	cursor: default;
+	font-size: 16px;
+	position: absolute;
+	background: #aaa;
+	width: 100px;
+	padding: 20px;
+}
+
+a:hover {
+	color: green;
+}

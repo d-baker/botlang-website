@@ -1,18 +1,39 @@
 <html>
 
   <head>
-    <title></title>
+    <title>Botlang | Translator</title>
     <meta charset="utf-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
     <script type="text/javascript" src="translator.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script type="text/javascript" src="dropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   </head>
 
   <body>
-    <form>
-        <textarea autofocus></textarea>
-        <button id="translate">Translate</button>
+
+    <div id="header">
+
+        <span id="menu"> &#9776;
+            <ul id="dropdown">
+                <li><a href="index.html">Dictionary</a></li>
+                <li><a href="translator.html">Translator</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul> 
+        </span>
+
+        <h1> Botlang | Translator </span> </h1>
+
+    </div>
+
+    <div id="stuff">
+        <textarea id="english" placeholder="type English to be translated" autofocus></textarea>
+
         <p id="translation"></p>
-    </form>
-      </body>
+    </div>
+
+    <button id="translate">Translate</button>
+    <button id="clear">Clear</button>
+
+
+    </body>
 </html>

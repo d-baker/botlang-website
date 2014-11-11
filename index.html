@@ -1,44 +1,57 @@
 <html>
 
   <head>
-    <title></title>
+    <title>Botlang | Dictionary</title>
     <meta charset="utf-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
-    <script type="text/javascript" src="home.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script type="text/javascript" src="ajax.js"></script>
+    <script type="text/javascript" src="dropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   </head>
 
   <body>
-    <input id="esorted" type="radio" name="sortorder" value="english" checked="checked">Sort by English</input>
-    <input id="bsorted" type="radio" name="sortorder" value="bottish">Sort by Bottish</input>
+
+    <div id="header">
+
+    <span id="menu"> &#9776;
+        <ul id="dropdown">
+            <li><a href="index.html">Dictionary</a></li>
+            <li><a href="translator.html">Translator</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul> 
+    </span>
+
+    <h1> Botlang | Dictionary </h1>
+
+    </div>
+    
+    <span id="search">
+        <input type="search" id="searchbar" placeholder="Search dictionary"></input>
+        <button id="searchbutton">Go</button>
+        <button id="clearsearch">Clear search</button>
+    </span>
 
     <ul class="abclinks">
-        <li>a</li>
-        <li>b</li>
-        <li>c</li>
-        <li>d</li>
-        <li>e</li>
-        <li>f</li>
-        <li>g</li>
-        <li>h</li>
-        <li>i</li>
-        <li>j</li>
-        <li>k</li>
-        <li>l</li>
-        <li>m</li>
-        <li>n</li>
-        <li>o</li>
-        <li>p</li>
-        <li>q</li>
-        <li>r</li>
-        <li>s</li>
-        <li>t</li>
-        <li>u</li>
-        <li>v</li>
-        <li>w</li>
-        <li>x</li>
-        <li>y</li>
-        <li>z</li>
+        <li><a href="#a">Top</a></li>
     </ul>
+
+    <span id="sort">
+        <input type="radio" name="sortorder" id="esorted" value="english"/>
+        <label for="esorted">Sort by English</label>
+
+        <input type="radio" name="sortorder" id="bsorted" value="bottish"/>
+        <label for="bsorted">Sort by Bottish</label>
+    </span>
+
+
+    <table id="heading">
+        <tr>
+            <th id="sortlang">english</th>
+            <th id="otherlang">bottish</th>
+        </tr>
+    </table>
+
+    <table id="definitions">
+    </table>
   </body>
 </html>

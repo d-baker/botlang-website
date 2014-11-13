@@ -87,20 +87,13 @@ textarea {
     font-size: $fontsize;
 }
 
-input, button {
+input[type=textarea], input[type=search], button {
     height: 26px;
     background: $bg;
     color: $fg;
     border: 1px solid gray;
     font-size: 14px;
     font-family: $font;
-}
-
-input[type=radio] {
-        background: $bg;
-    color: $fg;
-    border: 1px solid gray;
-
 }
 
 #search {
@@ -165,6 +158,7 @@ label {
 #menu {
     font-size: 30px;
     color: $highlight;
+	font-family: sans-serif;
     &:hover {
         cursor: pointer;
         color: $fg + $highlight;

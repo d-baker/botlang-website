@@ -121,18 +121,13 @@ textarea {
   font-family: "Titillium Web", sans-serif;
   font-size: 18px; }
 
-input, button {
+input[type=textarea], input[type=search], button {
   height: 26px;
   background: #eeeeee;
   color: #333333;
   border: 1px solid gray;
   font-size: 14px;
   font-family: "Titillium Web"; }
-
-input[type=radio] {
-  background: #eeeeee;
-  color: #333333;
-  border: 1px solid gray; }
 
 #search {
   float: right;
@@ -184,7 +179,8 @@ label {
 
 #menu {
   font-size: 30px;
-  color: #af4c4c; }
+  color: #af4c4c;
+  font-family: sans-serif; }
   #menu:hover {
     cursor: pointer;
     color: #e27f7f; }

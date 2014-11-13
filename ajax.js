@@ -2,6 +2,10 @@ $(document).ready(function() {
 
     $("#esorted").attr("checked", "checked");
 
+    function capitalise(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     // excellent comparison function from here:
     // http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
     function sortByProperty(property) {
@@ -53,8 +57,8 @@ $(document).ready(function() {
         data = data.sort(sortByProperty(sortlang));
 
         $("#definitions tr").remove();
-        $("#sortlang").text(sortlang);
-        $("#otherlang").text(otherlang);
+        $("#sortlang").text(capitalise(sortlang));
+        $("#otherlang").text(capitalise(otherlang));
 
         $(".abc").remove();
         $.each(data, function(i) {

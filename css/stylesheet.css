@@ -82,8 +82,10 @@ p:not(#translation) {
     font-style: italic; }
 
 .abclinks {
-  padding: 20px 0px; }
+  padding: 10px 0px; }
   .abclinks li {
+    padding: 0px 3px;
+    text-decoration: underline;
     list-style-type: none;
     display: inline;
     cursor: pointer;
@@ -102,9 +104,9 @@ p:not(#translation) {
     text-align: left; }
 
 #heading {
-  padding-top: 20px;
-  display: block;
-  width: 100%; }
+  margin-top: 15px;
+  border-top: 1px solid gray;
+  display: block; }
   #heading th {
     text-align: left;
     width: 200px;
@@ -120,9 +122,12 @@ textarea {
   font-size: 18px; }
 
 input, button {
+  height: 26px;
   background: #eeeeee;
   color: #333333;
-  border: 1px solid gray; }
+  border: 1px solid gray;
+  font-size: 14px;
+  font-family: "Titillium Web"; }
 
 input[type=radio] {
   background: #eeeeee;
@@ -131,11 +136,11 @@ input[type=radio] {
 
 #search {
   float: right;
-  padding: 20px 0px; }
+  padding: 10px 0px; }
 
 #transbuttons {
   display: block;
-  padding-top: 20px; }
+  padding-top: 10px; }
 
 label {
   padding-right: 20px; }
@@ -143,7 +148,7 @@ label {
 #stuff {
   width: 830px;
   height: 200px;
-  padding: 20px 0px; }
+  padding: 15px 0px; }
 
 #english {
   border: 1px solid gray;

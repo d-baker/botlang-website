@@ -1,61 +1,78 @@
 @import "reset";
 
+$font: "Titillium Web";
+$fontsize: 18px;
+
+$fg: #333;
+$bg: #eee;
+$secondary: #4cafaf;
+$highlight: #AF4C4C;
+
 body {
-	line-height: 1.5em;
-	padding: 0px 20px;
-	font-family: sans-serif;
+    background: $bg;
+    color: $fg;
+    line-height: 1.5em;
+    padding: 0px 20px;
+    font-size: $fontsize;
+    font-family: $font, sans-serif;
+}
+
+.textblock {
+    max-width: 550px;
 }
 
 h1 {
-	font-size: 30px;
-	display: inline;
+    font-size: 30px;
+    display: inline;
 }
 
+
+
 p:not(#translation) {
-	padding: 10px 0px;
-	&.footnote {
-		font-style: italic;
-	}
+    padding: 10px 0px;
+    &.footnote {
+        font-style: italic;
+    }
 }
 
 .abclinks {
-	padding: 20px 0px;
+    padding: 20px 0px;
 
-	li {
-    	list-style-type: none;
-    	display: inline;
-    	cursor: pointer;
-    	padding-right: 10px;
-	}
+    li {
+        list-style-type: none;
+        display: inline;
+        cursor: pointer;
+        padding-right: 10px;
+    }
 }
 
 #definitions {
-	display: block;
-	padding-bottom: 20px;
-	height: 60vh;
-	overflow: auto;
-	
-	td, th {
-		width: 200px;
-		padding-right: 30px;
-		padding-top: 10px;
-	}
+    display: block;
+    padding-bottom: 20px;
+    height: 60vh;
+    overflow: auto;
+    
+    td, th {
+        width: 200px;
+        padding-right: 30px;
+        padding-top: 10px;
+    }
 
-	tr {
-		text-align: left;
-	}		
+    tr {
+        text-align: left;
+    }       
 }
 
 #heading {
-	padding-top: 20px;
-	display: block;
-	width: 100%;
-	th {
-		text-align: left;
-		width: 200px;
-		padding: 10px 0px;
-		padding-right: 30px;
-	}
+    padding-top: 20px;
+    display: block;
+    width: 100%;
+    th {
+        text-align: left;
+        width: 200px;
+        padding: 10px 0px;
+        padding-right: 30px;
+    }
 }
 
 button {
@@ -63,78 +80,122 @@ button {
 }
 
 textarea {
-	resize: none;
+    resize: none;
+    font-family: $font, sans-serif;
+    font-size: $fontsize;
+}
+
+input, button {
+    background: $bg;
+    color: $fg;
+    border: 1px solid gray;
+}
+
+input[type=radio] {
+        background: $bg;
+    color: $fg;
+    border: 1px solid gray;
+
 }
 
 #search {
-	float: right;
-	padding: 20px 0px;
+    float: right;
+    padding: 20px 0px;
 }
 
 #transbuttons {
-	display: block;
-	padding-top: 20px;
+    display: block;
+    padding-top: 20px;
 }
 
 label {
-	padding-right: 20px;
+    padding-right: 20px;
 }
 
 #stuff {
-	width: 830px;
-	height: 200px;
-	padding: 20px 0px;
+    width: 830px;
+    height: 200px;
+    padding: 20px 0px;
 }
 
 #english {
-	border: 1px solid gray;
-	background: #eee;
-	color: black;
-	width: 400px;
-	height: 200px;
+    border: 1px solid gray;
+    background: #eee;
+    color: black;
+    width: 400px;
+    height: 200px;
 }
 
 #translation {
-	display: inline-block;
-	width: 400px;
-	height: 200px;
-	border: 1px solid gray;
-	position: relative;
-	background: #eee;
-	color: black;
-	float: right;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    border: 1px solid gray;
+    position: relative;
+    background: #eee;
+    color: black;
+    float: right;
 }
 
 #header {
-    //position: fixed;
-    background: white;
+    font-family: Electrolize;
     margin: 0px;
     border-bottom: 1px solid gray;
-	padding: 20px 0px;
-	z-index: 100;
+    padding: 20px 0px;
+    z-index: 100;
+
+    a {
+        text-decoration: none;
+        color: $fg;
+        &:hover, &:visited {
+            color: $fg;
+        }
+    }
 }
 
 .pgtitle {
-	display: none;
+    display: none;
 }
 
 #menu {
-	font-size: 30px;
-	&:hover {
-		cursor: pointer;
-		background: #aaa;
-	}
+    font-size: 30px;
+    color: $highlight;
+    &:hover {
+        cursor: pointer;
+        color: $fg + $highlight;
+    }
 }
 
 #dropdown {
-	cursor: default;
-	font-size: 16px;
-	position: absolute;
-	background: #aaa;
-	width: 100px;
-	padding: 20px;
+    list-style-type: square;
+    cursor: default;
+    font-size: 16px;
+    position: absolute;
+    background: $bg;
+    margin-top: 20px;
+    padding: 20px 30px;
+    border: 1px solid gray;
 }
 
-a:hover {
-	color: green;
+#dropdown li a {
+    color: $highlight;
+    line-height: 1.5em;
+    &:visited {
+        color: $fg + $highlight;
+    }  
+    &:hover {
+        cursor: pointer;
+        color: $secondary;
+        text-decoration: underline;
+    }
+}
+
+a {
+    color: $highlight;
+    &:visited {
+        color: $fg + $highlight;
+    }   
+    &:hover {
+        color: $secondary;
+    }
 }

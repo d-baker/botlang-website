@@ -62,9 +62,15 @@ input, select {
   vertical-align: middle; }
 
 body {
+  background: #eeeeee;
+  color: #333333;
   line-height: 1.5em;
   padding: 0px 20px;
-  font-family: sans-serif; }
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif; }
+
+.textblock {
+  max-width: 550px; }
 
 h1 {
   font-size: 30px;
@@ -109,7 +115,19 @@ button {
   display: inline; }
 
 textarea {
-  resize: none; }
+  resize: none;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px; }
+
+input, button {
+  background: #eeeeee;
+  color: #333333;
+  border: 1px solid gray; }
+
+input[type=radio] {
+  background: #eeeeee;
+  color: #333333;
+  border: 1px solid gray; }
 
 #search {
   float: right;
@@ -145,28 +163,50 @@ label {
   float: right; }
 
 #header {
-  background: white;
+  font-family: Electrolize;
   margin: 0px;
   border-bottom: 1px solid gray;
   padding: 20px 0px;
   z-index: 100; }
+  #header a {
+    text-decoration: none;
+    color: #333333; }
+    #header a:hover, #header a:visited {
+      color: #333333; }
 
 .pgtitle {
   display: none; }
 
 #menu {
-  font-size: 30px; }
+  font-size: 30px;
+  color: #af4c4c; }
   #menu:hover {
     cursor: pointer;
-    background: #aaa; }
+    color: #e27f7f; }
 
 #dropdown {
+  list-style-type: square;
   cursor: default;
   font-size: 16px;
   position: absolute;
-  background: #aaa;
-  width: 100px;
-  padding: 20px; }
+  background: #eeeeee;
+  margin-top: 20px;
+  padding: 20px 30px;
+  border: 1px solid gray; }
 
-a:hover {
-  color: green; }
+#dropdown li a {
+  color: #af4c4c;
+  line-height: 1.5em; }
+  #dropdown li a:visited {
+    color: #e27f7f; }
+  #dropdown li a:hover {
+    cursor: pointer;
+    color: #4cafaf;
+    text-decoration: underline; }
+
+a {
+  color: #af4c4c; }
+  a:visited {
+    color: #e27f7f; }
+  a:hover {
+    color: #4cafaf; }

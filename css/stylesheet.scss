@@ -1,7 +1,7 @@
 @import "reset";
 
-$font: "Source Code Pro";
-$fontsize: 18px;
+$font: "Titillium Web";
+$fontsize: 16px;
 
 $fg: #333;
 $bg: #eee;
@@ -101,7 +101,7 @@ input[type=textarea], input[type=search], button {
     padding: 10px 0px;
 }
 
-#transbuttons {
+#transradios {
     display: block;
     padding-top: 10px;
 }
@@ -199,3 +199,5 @@ a {
         color: $secondary;
     }
 }
+
+@import "responsive"

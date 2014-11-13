@@ -150,7 +150,8 @@ label {
   background: #eee;
   color: black;
   width: 400px;
-  height: 200px; }
+  height: 200px;
+  float: left; }
 
 #translation {
   display: inline-block;

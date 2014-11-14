@@ -95,7 +95,7 @@ p:not(#translation) {
   display: block;
   padding-bottom: 20px;
   height: 60vh;
-  overflow: auto; }
+  overflow-y: scroll; }
   #definitions td, #definitions th {
     width: 200px;
     padding-right: 30px;

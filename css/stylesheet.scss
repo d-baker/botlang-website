@@ -52,7 +52,7 @@ p:not(#translation) {
     display: block;
     padding-bottom: 20px;
     height: 60vh;
-    overflow: auto;
+    overflow-y: scroll;
     
     td, th {
         width: 200px;
